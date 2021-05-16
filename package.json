@@ -4,7 +4,8 @@
   "description": "unit testing | integration testing | functional testing (e2e)",
   "main": "index.js",
   "scripts": {
-    "test": "find ./src/ -name '*.test.js' | xargs ./node_modules/.bin/mocha --reporter spec"
+    "test": "find ./src/ -name '*.test.js' | xargs ./node_modules/.bin/mocha --reporter spec",
+    "coverage": "find ./src/ -name '*.test.js' | xargs ./node_modules/.bin/istanbul cover _mocha -- --reporter spec"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "@sinonjs/referee-sinon": "^9.0.2",
     "chai": "^4.3.4",
+    "istanbul": "^0.4.5",
     "jsverify": "^0.8.4",
     "knuth-shuffle": "^1.0.8",
     "mocha": "^8.4.0",
